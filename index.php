@@ -5,7 +5,7 @@ echo "
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Hello Azure</title>
+    <title>Te Amo Minha Princesa</title>
     <style>
         body {
             display: flex;
@@ -15,27 +15,34 @@ echo "
             background-color: #f4f4f4;
             margin: 0;
             font-family: Arial, sans-serif;
+            flex-direction: column;
         }
         h1 {
             font-size: 48px;
-            color: #333;
+            color: #ff4d6d;
+            display: flex;
+            align-items: center;
         }
-        .dots::after {
-            content: '';
-            display: inline-block;
-            animation: dots 1.5s steps(4, end) infinite;
+        .heart {
+            font-size: 48px;
+            color: red;
+            margin-left: 10px;
+            animation: pulse 1.5s infinite alternate;
         }
-        @keyframes dots {
-            0% { content: ''; }
-            25% { content: '.'; }
-            50% { content: '..'; }
-            75% { content: '...'; }
-            100% { content: ''; }
+        @keyframes pulse {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello Azure<span class='dots'></span></h1>
+    <h1>Te amo minha princesa <span class='heart'>❤️</span></h1>
 </body>
 </html>
 ";

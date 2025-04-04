@@ -20,12 +20,23 @@ echo "
             font-size: 48px;
             color: #333;
         }
+        .dots::after {
+            content: '';
+            display: inline-block;
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+        @keyframes dots {
+            0% { content: ''; }
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+            100% { content: ''; }
+        }
     </style>
 </head>
 <body>
-    <h1>Hello Azure!</h1>
+    <h1>Hello Azure<span class='dots'></span></h1>
 </body>
 </html>
 ";
 ?>
-
